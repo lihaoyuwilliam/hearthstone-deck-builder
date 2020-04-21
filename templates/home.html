@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Search Character</title>
+
+
+ <body>
+
+
+<div>	
+		<h1>
+			Hearthstone Deck Builder
+		</h1>
+
+	<div>
+
+		<div>
+			<h2>
+				Search card
+			</h2>
+
+			<form method="POST" action="/card-name">
+				<label for="card_name">
+				Full name: 
+				</label>
+				<input type="text"  name=card_name>
+
+				<button type="submit">
+				Search
+				</button>
+					</form>
+					
+            <form method="POST" action="/partial-card-name">
+				<label for="partial_card_name">
+				Partial name: 
+				</label>
+				<input type="text" name=partial_card_name>
+
+				<button type="submit">
+				Search
+				</button>
+					</form>
+            <form action="/card-class" method="POST"> 
+                <label for="card_class">Class: </label> 
+                <select name=card_class> 
+                <option value="Mage">Mage</option> 
+                <option value="Druid">Druid</option>
+                <option value="Hunter">Hunter</option>
+                <option value="Paladin">Paladin</option>
+                <option value="Priest">Priest</option>
+                <option value="Rogue">Rogue</option>
+                <option value="Shaman">Shaman</option>
+                <option value="Warlock">Warlock</option>
+                <option value="Warrior">Warrior</option>
+                <option value="Neutral">Neutral</option>
+                </select> 
+                
+                <button type="submit">
+				Search
+				</button>
+                    </form> 
+				
+		</div>
+
+	</div>
+
+    <div>
+
+		<div>
+			<h2>
+				Build deck
+			</h2>
+			
+			
+			<form method="POST" action="http://localhost:5000/all-decks">
+			<label>
+				All decks: 
+				</label>
+				<button type="submit">
+				Show
+				</button>
+					</form>
+			<h3>
+				Create a new deck
+			</h3>
+			
+			<form method="POST" action="/new-deck">
+				<label for="deck_name">
+				Deck name: 
+				</label>
+				<input type="text"  name=deck_name><br/>
+				
+				<label for="deck_class">Deck class: </label> 
+                <select name=deck_class> 
+                <option value="Mage">Mage</option> 
+                <option value="Druid">Druid</option>
+                <option value="Hunter">Hunter</option>
+                <option value="Paladin">Paladin</option>
+                <option value="Priest">Priest</option>
+                <option value="Rogue">Rogue</option>
+                <option value="Shaman">Shaman</option>
+                <option value="Warlock">Warlock</option>
+                <option value="Warrior">Warrior</option>
+                </select> 
+				
+
+				<button type="submit">
+				Create
+				</button>
+					</form>
+            
+            <h3>
+				Delete a deck
+			</h3>
+			
+			<form method="POST" action="/delete-deck">
+				<label for="deck_name">
+				Deck name: 
+				</label>
+				<input type="text"  name=deck_name>
+
+				
+
+				<button type="submit">
+				Delete
+				</button>
+					</form>
+					
+            <h3>
+				Show deck
+			</h3>
+			
+			<form method="POST" action="/show-deck">
+				<label for="deck_name">
+				Deck name: 
+				</label>
+				<input type="text"  name=deck_name>
+
+				<button type="submit">
+				Show
+				</button>
+					</form>
+			
+			
+						
+            <h3>
+				Add a card
+			</h3>
+			
+			<form method="POST" action="/add-card">
+				<label for="deck_name">
+				Deck name: 
+				</label>
+				<input type="text"  name=deck_name><br/>
+
+				<label for="card_name">
+				Card name:
+				</label>
+				<input type="text"  name=card_name>
+
+				<button type="submit">
+				Add
+				</button>
+					</form>
+					
+            <h3>
+				Delete a card
+			</h3>
+			
+			<form method="POST" action="/delete-card">
+				<label for="deck_name">
+				Deck name: 
+				</label>
+				<input type="text"  name=deck_name><br/>
+
+				<label for="card_name">
+				Card name:
+				</label>
+				<input type="text"  name=card_name>
+
+				<button type="submit">
+				Delete
+				</button>
+					</form>
+            
+            
+			
+        </div>
+
+	</div>
+
+</div>
+
+
+
+  </body>
+
+
+
+
+</html>
